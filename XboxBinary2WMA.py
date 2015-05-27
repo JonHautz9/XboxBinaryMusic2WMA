@@ -1,4 +1,4 @@
-#Made for Pythoon 3.3.2
+#Made for Pythoon 3.3
 import base64
 import binascii
 import os
