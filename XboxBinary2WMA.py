@@ -2,7 +2,7 @@ import base64
 import binascii
 import os
 ID = 1
-if not os.path.exists('WMA'):
+if not os.path.exists('WMA'):			#Checks if a relative WMA directory exists and makes one if not
     os.makedirs('WMA')
 for (dirname, dirs, files) in os.walk('.'):
 	for filename in files:
@@ -11,13 +11,13 @@ for (dirname, dirs, files) in os.walk('.'):
 		f=filename
 		F=open(f,'rb')
 		F.seek(13)
-		S = 'WMA\\' + str(ID)
+		S = 'WMA\\' + str(ID)		#I had some files with the same name (i.e track 1, track 2) this avoids overwriting them
 		S = S + '_'
 		int(ID)
 		for x in range(0,76):
 			c = F.read(1)
 			i = binascii.hexlify(c)
-			if i== b'4a':
+			if i== b'4a':		#This is one of my first python scripts, please excuse that all this could be converted into a dictionary.
 				S=S+ 'J'
 				continue
 			if i== b'4b':
