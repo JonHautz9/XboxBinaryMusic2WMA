@@ -15,9 +15,9 @@ for (dirname, dirs, files) in os.walk('.'):
 		S = 'WMA\\' + str(ID)		#I had some files with the same name (i.e track 1, track 2) this avoids overwriting them
 		S = S + '_'
 		int(ID)
-		for x in range(0,76):		#base64.b16decode() was not converting certain characters at the time, so I had to write the conversions for them
+		for x in range(0,76):		#Finds the title of the track	
 			c = F.read(1)
-			i = binascii.hexlify(c)
+			i = binascii.hexlify(c)	#base64.b16decode() was not converting certain characters at the time, so I had to write the conversions for them
 			if i== b'4a':		#This is one of my first python scripts, please excuse that all this could be converted into a dictionary.
 				S=S+ 'J'	
 				continue
