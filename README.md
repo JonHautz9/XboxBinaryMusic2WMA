@@ -1,6 +1,6 @@
 # XboxBinaryMusic2WMA
 
-This script was written for Python 3.3 and XBOX 360 music files.
+This script was written for Python 3.3 and XBox 360 music files.
 
 Simply run in the directory with the binaries and it will save them to a .wma format.
 It will create an ID for each file and place it before the title of each song which is extracted from the binaries' header.
